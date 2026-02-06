@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Selection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+  <img src="images/menu.png" alt="Menu">
+
+  <a href="https://drive.google.com/drive/folders/145cSMfCTIx9aBAqzjcX9Ggqkp7oKNNoq?usp=sharing" class="drive-link" target="_blank"></a>
+
+  <form
+    action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
+    method="POST"
+    target="hidden_iframe"
+  >
+    <input type="hidden" name="entry.1655838621" id="menuName">
+
+    <input name="entry.APPETIZER_ID" class="menu-input appetizer">
+    <input name="entry.MAIN_ID" class="menu-input main">
+    <input name="entry.DESSERT_ID" class="menu-input dessert">
+    <input name="entry.DRINK_ID" class="menu-input drink">
+
+    <button type="button" class="btn submit" onclick="submitMenu()"></button>
+  </form>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+}
+
+.page {
+  position: relative;
+  width: 430px;
+  margin: 0 auto;
+}
+
+.page img {
+  width: 100%;
+  display: block;
+}
+
+/* Invisible clickable areas */
+.full-click {
+  position: absolute;
+  inset: 0;
+}
+
+/* RSVP */
+.name-input {
+  position: absolute;
+  bottom: 295px;
+  left: 80%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 45px;
+  background: transparent;
+  border: none;
+}
+
+.btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.yes {
+  bottom: 180px;
+  left: 10%;
+  width: 100px;
+  height: 50px;
+}
+
+.btn.no {
+  bottom: 180px;
+  right: 40%;
+  width: 100px;
+  height: 50px;
+}
+
+/* Menu inputs – base */
+.menu-input {
+  position: absolute;
+  width: 65%;          /* adjust width freely */
+  height: 40px;
+  background: transparent;
+  border: none;
+}
+
+/* GROUP 1 — Appetizer & Main */
+.appetizer {
+  top: 52%;
+  left: 18%;           /* move left/right */
+}
+
+.main {
+  top: 61%;
+  left: 18%;           /* same alignment as appetizer */
+}
+
+/* GROUP 2 — Dessert & Drinks */
+.dessert {
+  top: 70%;
+  left: 40%;           /* slightly different margin */
+}
+
+.drink {
+  top: 79%;
+  left: 40%;
+}
+
+
+.btn.submit {
+  bottom: 60px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 50px;
+}
+
+.drive-link {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 60%;
+  height: 10%;
+}
+
+.photo-link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.photo-link a {
+  font-size: 16px;
+  text-decoration: underline;
+}
+

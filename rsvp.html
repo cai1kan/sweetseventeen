@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+  <img src="images/rsvp.png" alt="RSVP">
+
+  <form
+    action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
+    method="POST"
+    target="hidden_iframe"
+  >
+    <input
+      type="text"
+      name="entry.1218330803"
+      class="name-input"
+      placeholder="Your name"
+      required
+    >
+
+    <input type="hidden" name="entry.1605161074_sentinel" id="attendance">
+
+    <button type="button" class="btn yes" onclick="submitYes()">YES</button>
+    <button type="button" class="btn no" onclick="submitNo()">NO</button>
+  </form>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
