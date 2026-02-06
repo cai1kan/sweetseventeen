@@ -31,7 +31,7 @@ body {
   bottom: 295px;
   left: 80%;
   transform: translateX(-50%);
-  width: 70%;
+  width: 50%;
   height: 45px;
   background: transparent;
   border: none;
@@ -61,7 +61,7 @@ body {
 /* Menu inputs – base */
 .menu-input {
   position: absolute;
-  width: 65%;          /* adjust width freely */
+  width: 45%;          /* adjust width freely */
   height: 40px;
   background: transparent;
   border: none;
@@ -81,12 +81,12 @@ body {
 /* GROUP 2 — Dessert & Drinks */
 .dessert {
   top: 70%;
-  left: 40%;           /* slightly different margin */
+  left: 43%;           /* slightly different margin */
 }
 
 .drink {
   top: 79%;
-  left: 40%;
+  left: 43%;
 }
 
 
@@ -117,4 +117,5 @@ body {
   font-size: 16px;
   text-decoration: underline;
 }
+
 
