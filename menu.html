@@ -1,3 +1,5 @@
+no tell me how to link the submit button
+what code do i use for that if this is the page code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,41 +13,28 @@
 <div class="page">
   <img src="menu.png" alt="Menu">
 
-  <form id="menuForm" 
-        action="https://forms.gle/k2kTRRc8Z5ujDDDY8" 
-        method="POST" 
-        target="hidden_iframe">
+  <a href="https://drive.google.com/drive/folders/145cSMfCTIx9aBAqzjcX9Ggqkp7oKNNoq?usp=sharing" class="drive-link" target="_blank"></a>
 
-    <!-- Hidden field for guest/menu name -->
+  <form
+    action="https://docs.google.com/forms/d/e/1FAIpQLSe0untVZBJ7yxBDvwN0T-t7fMDnbtmILcVW_Co-9MvQs7bhxw/viewform"
+    method="POST"
+    target="hidden_iframe"
+  >
     <input type="hidden" name="entry.1655838621" id="menuName">
 
-    <!-- Menu inputs -->
-    <input name="entry.1051211105" class="menu-input appetizer" placeholder="Appetizer">
-    <input name="entry.364223164" class="menu-input main" placeholder="Main">
-    <input name="entry.2108328345" class="menu-input dessert" placeholder="Dessert">
-    <input name="entry.2082553352" class="menu-input drink" placeholder="Drink">
+    <input name="entry.1051211105" class="menu-input appetizer">
+    <input name="entry.364223164" class="menu-input main">
+    <input name="entry.2108328345" class="menu-input dessert">
+    <input name="entry.2082553352" class="menu-input drink">
 
-    <!-- Next button submits form and goes to next page -->
-    <button type="button" id="nextBtn" class="btn submit">Next</button>
+    <button type="button" class="btn submit" onclick="submitMenu()"></button>
   </form>
 
-  <!-- Hidden iframe for safe background submission -->
   <iframe name="hidden_iframe" style="display:none;"></iframe>
 </div>
 
-<script>
-document.getElementById('nextBtn').addEventListener('click', function() {
-    // Fill hidden field with guest name from localStorage
-    document.getElementById('menuName').value = localStorage.getItem('guestName') || "";
-
-    // Submit form to Google Forms in hidden iframe
-    document.getElementById('menuForm').submit();
-
-    // Redirect to next page after submission
-    window.location.href = "thankyou-yes.html";
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+
 
