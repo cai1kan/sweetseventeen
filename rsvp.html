@@ -24,13 +24,13 @@
       target="hidden_iframe"
       required
     >
-
-   <!-- Hidden input for short answer question -->
-  <input type="hidden" name="entry.1605161074" id="attendance">
-
-  <!-- Buttons -->
-  <button type="button" onclick="submitForm('YES')">YES</button>
-  <button type="button" onclick="submitForm('NO')">NO</button>
+   <input
+      type="text"
+      name="entry.1605161074"
+      class="attendance-input"
+      placeholder="Will you attend? (YES/NO)"
+      required
+  >
 </form>
 
   <iframe name="hidden_iframe" style="display:none;"></iframe>
@@ -39,6 +39,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
