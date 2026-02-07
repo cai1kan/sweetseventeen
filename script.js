@@ -1,5 +1,4 @@
 function submitYes() {
-  document.getElementById("attendance").value = "YES";
   document.querySelector("form").submit();
   localStorage.setItem("guestName", document.querySelector(".name-input").value);
   window.location.href = "menu.html";
@@ -27,6 +26,7 @@ function submitNext() {
   // Optional: redirect to next page
   window.location.href = "menu.html"; // change this to whatever your next page is
 }
+
 
 
 
