@@ -11,29 +11,40 @@
 <div class="page">
   <img src="menu.png" alt="Menu">
 
-  <a href="https://drive.google.com/drive/folders/145cSMfCTIx9aBAqzjcX9Ggqkp7oKNNoq?usp=sharing" class="drive-link" target="_blank"></a>
+  <form id="menuForm" 
+        action="https://docs.google.com/forms/d/e/1FAIpQLSe0untVZBJ7yxBDvwN0T-t7fMDnbtmILcVW_Co-9MvQs7bhxw/formResponse" 
+        method="POST" 
+        target="hidden_iframe">
 
-  <form
-    action="https://docs.google.com/forms/d/e/1FAIpQLSe0untVZBJ7yxBDvwN0T-t7fMDnbtmILcVW_Co-9MvQs7bhxw/viewform?usp=dialog"
-    method="POST"
-    target="hidden_iframe"
-  >
+    <!-- Hidden field for guest/menu name -->
     <input type="hidden" name="entry.1655838621" id="menuName">
 
-    <input name="entry.1051211105" class="menu-input appetizer">
-    <input name="entry.364223164" class="menu-input main">
-    <input name="entry.2108328345" class="menu-input dessert">
-    <input name="entry.2082553352" class="menu-input drink">
+    <!-- Menu inputs -->
+    <input name="entry.1051211105" class="menu-input appetizer" placeholder="Appetizer">
+    <input name="entry.364223164" class="menu-input main" placeholder="Main">
+    <input name="entry.2108328345" class="menu-input dessert" placeholder="Dessert">
+    <input name="entry.2082553352" class="menu-input drink" placeholder="Drink">
 
-    <button type="button" class="btn submit" onclick="submitMenu()"></button>
+    <!-- Next button submits form and goes to next page -->
+    <button type="button" id="nextBtn" class="btn submit">Next</button>
   </form>
 
+  <!-- Hidden iframe for safe background submission -->
   <iframe name="hidden_iframe" style="display:none;"></iframe>
 </div>
 
-<script src="script.js"></script>
+<script>
+document.getElementById('nextBtn').addEventListener('click', function() {
+    // Fill hidden field with guest name from localStorage
+    document.getElementById('menuName').value = localStorage.getItem('guestName') || "";
+
+    // Submit form to Google Forms in hidden iframe
+    document.getElementById('menuForm').submit();
+
+    // Redirect to next page after submission
+    window.location.href = "thankyou-yes.html";
+});
+</script>
+
 </body>
 </html>
-
-
-
