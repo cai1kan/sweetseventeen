@@ -25,11 +25,13 @@
       required
     >
 
-    <input type="hidden" name="entry.1605161074" id="attendance">
+   <!-- Hidden input for short answer question -->
+  <input type="hidden" name="entry.1605161074" id="attendance">
 
-    <button type="button" class="btn yes" onclick="submitYes()">YES</button>
-    <button type="button" class="btn no" onclick="submitNo()">NO</button>
-  </form>
+  <!-- Buttons -->
+  <button type="button" onclick="submitForm('YES')">YES</button>
+  <button type="button" onclick="submitForm('NO')">NO</button>
+</form>
 
   <iframe name="hidden_iframe" style="display:none;"></iframe>
 </div>
