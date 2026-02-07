@@ -61,7 +61,7 @@ body {
 /* Menu inputs – base */
 .menu-input {
   position: absolute;
-  width: 60%;          /* adjust width freely */
+  width: 65%;          /* adjust width freely */
   height: 40px;
   background: transparent;
   border: none;
@@ -117,6 +117,7 @@ body {
   font-size: 16px;
   text-decoration: underline;
 }
+
 
 
 
