@@ -17,11 +17,5 @@ function submitMenu() {
   document.querySelector("form").submit();
   window.location.href = "thankyou-yes.html";
 }
-function submitForm(value) {
-  // Set the hidden input value
-  document.getElementById("attendance").value = value;
 
-  // Submit the form
-  document.forms[0].submit();
-}
 
